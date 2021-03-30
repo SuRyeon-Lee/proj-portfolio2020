@@ -1,0 +1,89 @@
+/* contact-menu */
+.contact-container {
+  height: 180vh;
+  width: 100vw;
+  overflow: hidden;
+}
+.half-part {
+  padding: 5vw 0;
+}
+.left-part {
+  background-image: url(../images/hit-me-up.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  /* background-position-x: 30%; */
+  /* position: sticky; */
+  /* top: 0;
+  left: 0; */
+}
+.right-part {
+  height: 100%;
+  width: 50vw;
+  background-color: #9265ce;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.left-part {
+  height: 100%;
+  width: 50vw;
+  background-color: #9bcbf1;
+  float: left;
+}
+.contact-section-title {
+  width: 80%;
+  color: #fff;
+  font-size: 4vw;
+  font-family: "Roboto Condensed", sans-serif;
+}
+.input-caption {
+  font-style: 10vw;
+  color: #fff;
+  font-family: "Press Start 2P", cursive;
+  margin-top: 5vw;
+  margin-bottom: 2vw;
+}
+.input-space {
+  width: 80%;
+  border-bottom: 2px solid #fff;
+}
+.input-space input,
+.input-space textarea {
+  width: 100%;
+  background: none;
+  border: none;
+  color: #fff;
+}
+.input-space input::placeholder,
+.input-space textarea::placeholder {
+  font-family: "Noto Sans KR", sans-serif;
+  color: #fff;
+}
+.submit {
+  height: 30vw;
+}
+@keyframes submit-ani {
+  0% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
+.contact-submit {
+  cursor: pointer;
+  margin-top: 5vw;
+  border: none;
+  background: none;
+  font-size: 4vw;
+  color: #fff;
+  font-family: "Press Start 2P", cursive;
+  animation: 0.5s submit-ani infinite alternate linear;
+}
+.contact-submit:hover {
+  color: #30e5a9;
+}

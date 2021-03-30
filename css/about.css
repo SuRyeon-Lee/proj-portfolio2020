@@ -1,0 +1,127 @@
+/* about */
+.about-container {
+  width: 100vw;
+  overflow: hidden;
+}
+.about-intro {
+  position: relative;
+  width: 100vw;
+  background: #bb43f9;
+}
+.about-photo {
+  position: absolute;
+  height: 70vw;
+  width: 45vw;
+  top: 30vw;
+  left: 0;
+  background-image: url("../images/about-photo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.about-title {
+  width: 70vw;
+  z-index: 9;
+  position: absolute;
+  right: 2vw;
+  top: 12vw;
+}
+.about-message {
+  padding-top: 50vw;
+  padding-left: 50vw;
+  padding-bottom: 10vw;
+  width: 50vw;
+  right: 0vw;
+  border: 1px solid white;
+}
+.about-message-text {
+  color: #fff;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 2vw;
+  line-height: 3vw;
+}
+.about-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 6vw 3%;
+}
+.about-part {
+  width: 94%;
+  margin-top: 7%;
+}
+.about-part:last-child {
+  margin-bottom: 3%;
+}
+
+.skills {
+  display: flex;
+  justify-content: space-between;
+  /* width: 55vw; */
+}
+.about-content-blank {
+  width: 45vw;
+  height: 100%;
+}
+
+.about-subtitle {
+  font-size: 3vw;
+  font-family: "Press Start 2P", cursive;
+  color: #0b2df9;
+  margin-bottom: 2vw;
+}
+.about-text {
+  width: 100%;
+  border-bottom: 2px solid #0b2df9;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1.5vw;
+  line-height: 4vw;
+}
+.about-text-first {
+  width: 45vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+.three-parts {
+  width: 15vw;
+}
+
+.nine-parts {
+  width: 95%;
+}
+.one-part {
+  width: 5%;
+  text-align: center;
+}
+.one-part a {
+  color: #0b2df9;
+}
+.education .about-text {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-keyword-section {
+  padding: 7vw 3%;
+  background: #ffa808;
+}
+
+.about-keyword-section .section-title {
+  color: #fff;
+  margin-bottom: 3vw;
+}
+.keywords-line {
+  left: 5%;
+  width: 85vw;
+  margin: 0 auto;
+  color: #fff;
+}
+.about-contact {
+  height: 100vh;
+  position: relative;
+  background-color: #50d66c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

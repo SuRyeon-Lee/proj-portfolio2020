@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+     <!-- favicons -->
+     <link rel="shortcut icon" href="./images/favicon/favicon-32.png" sizes="32x32"> 
+     <link rel="shortcut icon" href="./images/favicon/favicon-57.png" sizes="57x57"> 
+     <link rel="shortcut icon" href="./images/favicon/favicon-72.png" sizes="72x72"> 
+     <link rel="shortcut icon" href="./images/favicon/favicon-96.png" sizes="96x96"> 
+     <link rel="shortcut icon" href="./images/favicon/favicon-120.png" sizes="120x120">
+     <link rel="shortcut icon" href="./images/favicon/favicon-128.png" sizes="128x128">
+     <link rel="shortcut icon" href="./images/favicon/favicon-144.png" sizes="144x144">
+     <link rel="shortcut icon" href="./images/favicon/favicon-152.png" sizes="152x152">
+     <link rel="shortcut icon" href="./images/favicon/favicon-195.png" sizes="195x195">
+     <link rel="shortcut icon" href="./images/favicon/favicon-228.png" sizes="228x228">
+    <title>SooooRyeon</title>
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <script defer src="./script/contact.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+    (function() {
+    emailjs.init("user_RQsG6J6dHyHOWbNg22dht");
+    })();
+    </script>
+</head>
+<body>
+    <header class="nav">
+        <a href="./index.html"><img class="logo" src="./images/logo.svg" alt="SOOOORYEON"></a>
+        <div class="menu-btn" data-condition="off">
+            <img class="menu-effect effect1" src="./images/menu-effect_green.svg" alt="effect">
+            <img class="menu-effect effect2" src="./images/menu-effect_orange.svg" alt="effect">
+            <img class="menu" src="./images/menu.svg" alt="menu">
+        </div>
+    </header>
+
+    <div class="menu-container" data-menu=0>
+        <div class="menu-title" data-menu=0>
+            <div class="menu-bg" data-menu="0"></div>
+            <a class="category" href="./works.html" data-menu=1><h1 data-menu=1>WORK</h1></a>
+            <a class="category" href="./explore.html" data-menu=2><h1 data-menu=2>EXPLORE</h1></a>
+            <a class="category" href="./about.html" data-menu=3><h1 data-menu=3>ABOUT</h1></a>
+            <a class="category" href="./contact.html" data-menu=4><h1 data-menu=4>CONTACT</h1></a>
+        </div>
+    <!-- /menu -->
+    </div>
+
+    <div class="contact-container">
+        <div class="half-part left-part"></div>
+        <div class="half-part right-part">
+            <h1 class="contact-section-title">HIT ME UP</h1>
+            <div class="input-space name">
+                <h3 class="input-caption">NAME</h3>
+                <input class="contact-input" type="text" name="name" placeholder="이름">
+            </div>
+            <div class="input-space company">
+                <h3 class="input-caption">COMPANY</h3>
+                <input class="contact-input" type="text" name="company" placeholder="회사명">
+            </div>
+            <div class="input-space location">
+                <h3 class="input-caption">LOCATION</h3>
+                <input class="contact-input" type="text" name="location" placeholder="주소">
+            </div>
+            <div class="input-space email">
+                <h3 class="input-caption">EMAIL</h3>
+                <input class="contact-input" type="text" name="email" placeholder="이메일">
+            </div>
+            <div class="input-space subject">
+                <h3 class="input-caption">SUBJECT</h3>
+                <input class="contact-input" type="text" name="subject" placeholder="제목">
+            </div>
+            <div class="input-space message">
+                <h3 class="input-caption">MESSAGE</h3>
+                <textarea class="contact-input" rows="5" name="message" placeholder="메세지"></textarea>
+            </div>
+            <div class="submit">
+                <input class="contact-submit" type="submit" name="submit" value="SUBMIT">
+            </div>
+            
+        </div>
+    </div>
+    <script type="text/javascript">
+	
+        $(document).ready(function() {
+            emailjs.init("user_RQsG6J6dHyHOWbNg22dht");		
+            $('input[name=submit]').click(function(){       	 
+              
+              const templateParams = {	
+                    name: $('input[name=name]').val(),
+                    company: $('input[name=company]').val(), 
+                    location : $('input[name=location]').val(),
+                    email : $('input[name=email]').val(),
+                    subject : $('textarea[name=subject]').val(),
+                    message : $('textarea[name=message]').val()
+                               };
+                        
+                        
+             emailjs.send('bunnyatgym@gmail.com', 'template_3rgdji1', templateParams)
+                     .then(function(response) {
+                        console.log('SUCCESS!', response.status, response.text);
+                     }, function(error) {
+                        console.log('FAILED...', error);
+                     });
+            });
+            
+        });
+        
+    
+        </script>
+</body>
+</html>
